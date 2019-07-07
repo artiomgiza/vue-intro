@@ -1,0 +1,44 @@
+<html>
+<head>
+	<script src="https://unpkg.com/vue@latest/dist/vue.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+</head>
+
+<body>
+	<div id="app" class="col-sm-3 m-5">
+		<div class="form-group">
+			<label>Insert number to see whether it's perfect square:</label>
+			  <!-- v-model="my_number" @input="check_input" -->
+			<input                                          class="form-control" placeholder="insert number">	
+		</div>
+		<!-- v-if="is_square(parseInt(my_number))" -->
+		<div                                       class="alert alert-success">
+			<h5> Yes, ${my_number} is square! </h5>	
+			<h6> Look: ${my_number_sqrt} x ${my_number_sqrt} = ${my_number}	</h6>					 
+		</div>
+		<!-- v-else-if="my_number != ''"  -->
+		<div                              class="alert alert-info">
+			<h5> Hmm... ${my_number} is not a perfect square</h5>
+			<h6> This number located between 2 perfect squares: ${my_number_prev_square} and ${my_number_next_square} </h6>
+		</div>
+	</div>
+</body>
+    
+<script>
+	new Vue({
+        el: '#app',
+        delimiters: ['${', '}'],
+        data: {
+            
+        },
+        computed: {
+          	
+        },
+        methods: {
+            
+        },
+    })
+</script>
+
+</html>
